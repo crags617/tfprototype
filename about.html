@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About | NPTechfinder Demo</title>
+   	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   	<meta name="viewport" content="width=device-width, minimum-scale=1.0 maximum-scale=1.0"> <!--adjust this to see what happens-->
+	<link href='http://fonts.googleapis.com/css?family=Chau+Philomene+One|Just+Me+Again+Down+Here' rel='stylesheet' type='text/css'> <!--google fonts-->
+   	<link rel="stylesheet" type="text/css" href="mycss.css"/>
+   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> <!--jquery library from google-->
+   	<script src="myjs.js"></script>
+</head>
+
+<body>
+
+<div id="header">
+	<table>
+		<tr>
+			<td width="40%">
+				<div id="techfinder">TFPrototype</div>
+			</td>
+			<td width="22%">
+			<!--get means add text/info to URL, post does not-->
+			<!--can use cgi.parse() to get info, put in python program mypy.py and set action=mypy.py or somethin-->
+				<form method="get" action="resultspage.html" >
+				<label>Search For:
+					<input type="text" name="Search For" size="14" maxlength="20" value="IT Support" onclick="search_alert()"/>
+				</label>
+			</td>
+			<td width="22%">
+				<label>Located in:
+					<input type="text" name="Last" size="14" maxlength="20" value="San Francisco" onclick="location_alert()"/>
+				</label>
+			</td>
+			<td width="10%">
+				<div id="searchbutton">
+					<input type="image" src="http://tfprototype.aspirationtech.org/wp-content/uploads/2011/08/search-magglass-button-4.png" name="SEARCH">
+				</div>
+				</form>
+			</td>
+		</tr>
+	</table>
+</div>
+
+<br>
+
+<h3> 
+	<a href="index.html">Welcome</a> | 
+	About TechFinder | 
+	<a href="categories.html">Browse Categories</a>  | 
+	<a href="http://www.youtube.com/watch?v=3t8MeE8Ik4Y">Help</a>
+</h3>
+
+<h2>Overview of TechFinder</h2>
+<p>In 2010, <a href="http://home.techsoup.org/pages/default.aspx">TechSoup Global</a> and <a href="http://www.nten.org/">NTEN</a> decided to retire their site <a href="http://www.TechFinder.org">TechFinder.org</a>, passing the data on to <a href="http://www.AspirationTech.org">Aspiration</a> with an invitation to create a next-generation version. For much of the past decade, TechFinder served as a resource to help nonprofits identify technology service providers, and Aspiration is proud to be heading up efforts to get TechFinder back online.</p>
+<p>This summer, Aspiration's intern Caroline began researching other search engines, writing down ideas, sketching out pages, and collecting feedback from the community in order to move forward with this project. Check out <a href="http://tfprototype.aspirationtech.org/project-resources/">Project Resources</a> for some examples, and <a href="http://tfprototype.aspirationtech.org/how-i-spent-my-summer/">"How I Spent My Summer</a> for further details. Feel free to <a href="mailto:tfprototype@aspirationtech.org">contact us</a> anytime at tfprototype@aspirationtech.org!</p>
+<p>This page lays out Aspiration's overall vision for the new TechFinder and the community participation that will shape it, including:</p>
+
+<!--DO THE POPOUT STUFF HERE AS OPPOSED TO HAVING ALL OF THE TEXT ALWAYS SHOWING. then, with "no script": have it look the way this page does-->
+
+<ul>
+	<li><div id="background"><a href="#backgroundtext"><b>Background on Aspiration</b></a></div></li>
+	<li><div id="strategy"><a href="#strategytext"><b>TechFinder's role in Aspiration's overall strategy</b></a></div></li>
+	<li><div id="features"><a href="#featurestext"><b>TechFinder's target users and likely supported features</b></a></div></li>
+	<li><div id="feedback"><a href="#feedbacktext"><b>Areas for feedback form the community</b></a></div></li>
+	<li><div id="participation"><a href="#participationtext"><b>Ways in which community participation will shape the platform vision and implementation</b></a></div></li>
+</ul>
+
+<noscript>
+<h2><a name="backgroundtext"></a>Aspiration</h2>
+<p>Aspiration is a unique and trusted nonprofit technology assistance provider, and our mission is to help nonprofits and foundations use software tools more effectively and sustainably. We offer end-user training, mentoring, and support, strategic consulting, product management and community strategy services, and collaborative knowledge sharing events. In support of these offerings, Aspiration maintains two knowledge aggregation sites: <a href="http://www.socialsourcecommons.org">SocialSourceCommons.org</a> is a comprehensive inventory of nonprofit and NGO-related software tools, and <a href="http://www.answr.net">Answr.net</a> is an interactive question-and-answer platform providing best practices and how-to's on a range of nonprofit technology issues. For more on Aspiration, see <a href="http://aspirationtech.org/about">our website</a>.</p>
+
+<h2><a name="strategytext"></a>Role of TechFinder in Aspiration's overall strategy</h2>
+<p>TechFinder will serve as the third component in Aspiration's online platform model, providing a services directory to complement existing knowledge resources. The three sites will be integrated via open API's (Application Programmer Interfaces), so that TechFinder data can be displayed on SSC and Answr pages as well. For more information on this, see <a href="http://tfprototype.aspirationtech.org/project-resources/white-paper/">The Vision for a New TechFinder (White Paper)</a> under Project Resources.</p>
+<p>Essentially, our three online platforms will strive to address the three fundamental nonprofit support questions:</p>
+<ul>
+	<li>Social Source Commons: “What software is out there to support our work?”</li>
+	<li>Answr: “How do I use it effectively?”</li>
+	<li>TechFinder: “Who can help me deploy and use it?”</li>
+</ul>
+
+<h2><a name="featurestext"></a>Supported Features</h2>
+<p>The target users for TechFinder will be nonprofit technology decision makers and nonprofit technology service providers.</p>
+<p>Nonprofit staff will be able to:</p>
+<ul>
+	<li>Search or browse for technology services by:</li>
+<ul>
+	<li>Service needs</li>
+	<li>Location</li>
+	<li>Ratings and reviews</li>
+	<li>Languages spoken</li>
+	<li>Programmatic specializations</li>
+</ul>
+	<li>View newly listed service providers</li>
+	<li>Rate a service provider</li>
+	<li>Write and read reviews of service providers</li>
+	<li>Add a new service provider to the database, or update information about an existing record</li>
+	<li>Maintain a profile and get recommendations based on past searches and reviews</li>
+</ul>
+<p>Technology service providers will be able to:</p>
+<ul>
+	<li>Maintain a service provider profile</li>
+	<li>Receive notification when reviewed by users as well as about how many times their profile has been viewed</li>
+	<li>Search or browse for other providers</li>
+	<li>List tools they have experience with</li>
+</ul>
+
+<h2><a name="feedbacktext"></a>Community Feedback</h2>
+<p>Aspiration believes that all nonprofit technology development projects should be driven from the outset by the users who will ultimately employ the solution.</p>
+<p>As such, we are inviting broad participation as we design and build out TechFinder, asking for feedback on a range of choice points regarding both the site's physical layout as well as its functionality.</p>
+<p>The first area we'll ask for feedback on is TechFinder's <b>search function</b>, which will utilize an optimal combination of free-write and drop-down search boxes to allow for quick and efficient searches, as well as effective Advanced Search or filter options for browsing. Options we will present are:</p>
+<ul>
+	<li>Free-write search box for location, or drop-down until more locations are covered</li>
+	<li>One free-write searchbox for technology and service keywords, or one free-write keyword search box with a dropdown for select services</li>
+	<li>Content beneath search box: general or categorized recommendations, top service request, recently added or recently reviewed providers</li>
+	<li>Advanced search options: filters that show up for each search, separate advanced search page, ability to browse by category</li>
+</ul>
+<p>The other crucial area we invite community participation on is TechFinder's <b>rating and review system</b>, which will constitute a simple, effective way to offer and access both quick and detailed feedback on service providers.</p>
+<p>Possibilities for this system include:</p>
+<ul>
+	<li>One click rating: “recommend” without rating scale or written review</li>
+	<li>General rating scale:</li>
+<ul>
+	<li>Rate 1-5 based on desire to re-use service</li>
+	<li>Rate 1-100% based on likelihood of re-using service</li>
+	<li>Rate 1-5 “overall” with optional specific ratings in categories such as appropriate pricing, professionalism, responsiveness, helpfulness, friendliness, and flexibility</li>
+</ul>
+	<li>Option to view “rating details”: rating distribution chart, rating over time</li>
+	<li>A rating algorithm that puts more weight on more recent ratings</li>
+	<li>The ability to rate a review useful</li>
+	<li>Required categories for written reviews such as what the particular service the provider was used for or where the reviewer is from</li>
+</ul>
+
+<h2><a name="participationtext"></a>Ways to Participate</h2>
+<p>As we move forward, we plan on collecting feedback by presenting choice points composed of screenshots, examples, or descriptions, as well as posing more open-ended questions. In addition to engaging directly with our TechFinder advisory group, channels on which we will engage the broader community will include:</p>
+<ul>
+	<li><a href="http://blog.socialsourcecommons.org"><b>Blogging</b></a>: We'll think out loud as we move along the path from concept to reality with interaction through comments as well as embedded surveys.</li>
+	<li><a href="http://www.facebook.com/AspirationTech"><b>Social media</b></a>: We'll post pictures and use status updates to get feedback from our friends through “likes” and comments, and <a href="mailto:tfprototype@aspirationtech.org">email tfprototype@aspirationtech.org</a>.</li>
+	<li><b>Webinars</b>: We'll walk through some potential layouts and uses of TechFinder as another means of collecting feedback from anyone interested.</li>
+</ul>
+</noscript>
+
+<div id="footer">
+<a href="mailto:caroline@aspirationtech.org">Give us feedback!</a>
+</div>
+
+</body>
+</html>

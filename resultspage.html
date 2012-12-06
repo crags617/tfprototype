@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Results | NPTechfinder Demo</title>
+   	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   	<meta name="viewport" content="width=device-width, minimum-scale=1.0 maximum-scale=1.0"> <!--adjust this to see what happens-->
+	<link href='http://fonts.googleapis.com/css?family=Chau+Philomene+One|Just+Me+Again+Down+Here' rel='stylesheet' type='text/css'> <!--google fonts-->
+   	<link rel="stylesheet" type="text/css" href="mycss.css"/>
+   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> <!--gets jquery library from google-->
+   	<script src="myjs.js"></script>
+</head>
+
+<body>
+
+<div id="header">
+	<table>
+		<tr>
+			<td width="40%">
+				<div id="techfinder">TFPrototype</div>
+			</td>
+			<td width="22%">
+			<!--get means add text/info to URL, post does not-->
+			<!--can use cgi.parse() to get info, put in python program mypy.py and set action=mypy.py or somethin-->
+				<form method="get" action="resultspage.html" >
+				<label>Search For:
+					<input type="text" name="Search For" size="14" maxlength="20" value="IT Support" onclick="search_alert()"/>
+				</label>
+			</td>
+			<td width="22%">
+				<label>Located in:
+					<input type="text" name="Last" size="14" maxlength="20" value="San Francisco" onclick="location_alert()"/>
+				</label>
+			</td>
+			<td width="10%">
+				<div id="searchbutton">
+					<input type="image" src="http://tfprototype.aspirationtech.org/wp-content/uploads/2011/08/search-magglass-button-4.png" name="SEARCH">
+				</div>
+				</form>
+			</td>
+		</tr>
+	</table>
+</div>
+<br>
+<h3> 
+	<a href="index.html">Welcome</a> | 
+	<a href="about.html">About TechFinder</a> | 
+	<a href="categories.html">Browse Categories</a>  | 
+	<a href="http://www.youtube.com/watch?v=3t8MeE8Ik4Y">Help</a>
+</h3>
+
+
+	<p>Search for <b>IT support</b> near <b>San Francisco, CA</b></p>
+	<p>Sort by: <b>Relevancy</b> | <a href="resultspagebyrating.html">Highest Rating</a> | <a href="resultspagebyreviews.html">Most Reviews</a> | <a href="resultspagebydate.html">Date Added</a></p>
+	<p><a href="https://www.google.com/search?hl=en&q=filters&bav=on.2,or.r_gc.r_pw.,cf.osb&biw=862&bih=746&ix=ieb&um=1&ie=UTF-8&tbm=isch&source=og&sa=N&tab=wi&authuser=0&ei=b_6gT8rCH8TrggfymPG4CQ">Show Filters</a></p>
+
+<div id="results">
+	<p>
+		<span style="font-size: 20px; font-style: bold;"><a href="http://tfprototype.aspirationtech.org/project-resources/provider-profile/">Sarai, LLC</a> * * * * * </span>
+		<i>7 Reviews</i>
+		<span style="float: right"><a href="mailto:caroline@aspirationtech.org">Submit a Review!</a> | <a href="http://www.taptone.com/userfiles/Link%20icons/bookmark_icon.gif">Bookmark</a></span>
+		<br>
+		<span style="font-size: 12px; font-style: bold;"><a href="www.sarai.org">www.sarai.org</a> | San Francisco, CA</span>
+		<span style="font-size: 12px; float: right">Hours: Mon-Fri 8am-6pm</span>
+		<br>
+		Services Offered: 
+		<b><a href="index.html"><span onclick="notready_alert()"> Hardware &amp; IT Support</span></a>, <a href="index.html"><span onclick="notready_alert()">Network Administration</span></a></b>
+		<br>
+		<i>Sarai offers reliable, expert tech support to small businesses and nonprofit organizations in the San Francisco Bay area. Sarai’s experts are available on an hourly basis or through a set of comprehensive technology management plans, which bundle together essential services into an affordable package.</i>
+		<br>
+		<b>Previous Members’ Uses:</b> network problem, consistent IT support, colleague… (<a href="http://en.wiktionary.org/wiki/less_is_more">see more</a>)
+	</p>
+	<p>
+		<span style="font-size: 20px; font-style: bold;"><a href="http://tfprototype.aspirationtech.org/project-resources/provider-profile/">TechCollective</a> * * * * * </span>
+		<i>5 Reviews</i>
+		<span style="float: right"><a href="mailto:caroline@aspirationtech.org">Submit a Review!</a> | <a href="http://www.taptone.com/userfiles/Link%20icons/bookmark_icon.gif">Bookmark</a></span>
+		<br>
+		<span style="font-size: 12px; font-style: bold;"><a href="http://www.techcollective.com/">www.techcollective.com</a> | San Francisco, CA</span>
+		<span style="font-size: 12px; float: right">Hours: Mon-Fri 8am-6pm</span>
+		<br>
+		Services Offered: 
+		<b><a href="index.html"><span onclick="notready_alert()">Consulting</span></a>,  <a href="index.html"><span onclick="notready_alert()">Hardware &amp; IT Support</span></a></b>
+		<br>
+		<i>“TechCollective is a worker-owned company providing a full range of technology support and consulting services.  Based in San Francisco, and currently serving the greater San Francisco Bay Area, we specialize in the tech needs of individuals and small-to-medium sized businesses and other organizations…”</i>
+		<br>
+		<b>Previous Members’ Uses:</b> helped us recover data, virus removal, fixed my laptop… (<a href="http://en.wiktionary.org/wiki/less_is_more">see more</a>)
+	</p>
+</div>
+
+<div id="footer">
+	<p><b>Didn’t find what you were looking for?</b> Retry your search with “<span style="text-decoration: underline; color: #3399FF" onclick="search_alert()">any location</span>” or try <a href="categories.html">browsing by category</a></p>
+</div>
+
+</body>
+</html>
